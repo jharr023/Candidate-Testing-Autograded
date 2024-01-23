@@ -25,6 +25,8 @@ input.question("Hello! Please enter your name: ");
 
 function askQuestion(questions) {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
+
+  //iterates thru the questions array until the end, asks a question for each count, pushes the input to the candidate answers array//
 for (let i=0; i<=questions.length; i++)
 input.question(questions[i]);
 candidateAnswers.push(input[i])
