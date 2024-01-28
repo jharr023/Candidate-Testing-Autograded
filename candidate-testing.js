@@ -33,7 +33,8 @@ candidateAnswers.push(input[i])
 }
 
 function gradeQuiz(candidateAnswers) {
-
+var correctCount = 0;
+var incorrectCount = 0;
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
 //if (candidateAnswer === "Sally Ride") {
   //console.log("Correct!");
@@ -41,17 +42,29 @@ function gradeQuiz(candidateAnswers) {
   //console.log("Incorrect!")
 //}
 
+var i
 for (let i=0; i<=correctAnswers.length; i ++);{
-  if (correctAnswers[i] === candidateAnswers[i]) {
+let correctAnswersLower = correctAnswers.map(element => {
+  return element.toLowerCase();
+});
+ let candidateAnswersLower = candidateAnswers.map(element => {
+  return element.toLowerCase();
+});
+  if (correctAnswersLower[i] === candidateAnswersLower[i]) {
     console.log("Correct!");
+       var correctCount = correctCount + 1
   } else {
     console.log("Incorrect!");
+    var incorrectCount = incorrectCount + 1
   }
 }
-
-  let grade;  //TODO 3.2 use this variable to calculate the candidates score.
-
-
+//console.log(correctCount);
+//console.log(incorrectCount);
+  let grade = (correctCount)/(incorrectCount)*100;  //TODO 3.2 use this variable to calculate the candidates score.
+//grade = (number correct)/(number incorrect)*100,, updating already written code + some new code
+//use map method to convert all elements in arrays to lowercase (x = z.map(word => word.toLowerCase))
+//for each candidate answer that case-insensitively = the correct answer, add 1 to the 'correctCount' value (number value). else, add 1 to incorrectCount. 
+//after, divide correctCount/incorrectCount, multiply by 100
   return grade;
 }
 
