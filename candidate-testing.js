@@ -43,7 +43,7 @@ let totalQuestions = 5
   //console.log("Incorrect!")
 //}
 /*if (correctAnswers.length !== candidateAnswers.length) {
-  console.error("Error: Array lengths mismatch.");
+  console.log("Error: Array lengths mismatch.");
 }*/
 
 for (let i=0; i < totalQuestions; i ++){
@@ -65,9 +65,7 @@ console.log(`Q${i + 1}: Correct Answer: ${correctAnswerLower}, Candidate Answer:
 //use map method to convert all elements in arrays to lowercase (x = z.map(word => word.toLowerCase))
 //for each candidate answer that case-insensitively = the correct answer, add 1 to the 'correctCount' value (number value). else, add 1 to incorrectCount. 
 //after, divide correctCount/incorrectCount, multiply by 100
-/*console.log("Candidate Name: " = candidateName);
-console.log('Total Correct Answers : ' + correctAnswers);
-console.log('Candidate Score: ${grade.toFixed(2)}%)');*/
+
 
 
 console.log(`Total Correct Answers: ${correctCount}`);
