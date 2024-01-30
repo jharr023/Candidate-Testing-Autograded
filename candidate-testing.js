@@ -20,7 +20,8 @@ let candidateAnswers = [];
 
 function askForName(candidateName) {
   // TODO 1.1b: Ask for candidate's name //
-canditateName = input.question("Hello! Please enter your name: ");
+candidateName = input.question("Hello! Please enter your name: ");
+return candidateName
 }
 
 function askQuestion(questions) {
@@ -30,6 +31,7 @@ function askQuestion(questions) {
 for (let i=0; i < questions.length; i++) {
 candidateAnswer = input.question(questions[i]);
 candidateAnswers.push(candidateAnswer);
+//console.log(`Q${i + 1}: Candidate Answer: ${candidateAnswer}`);
 }
 }
 
@@ -71,12 +73,11 @@ console.log ("Grade: " + grade + "%" );
 }
 
 function runProgram() {
-  askForName();
+  candidateName  = askForName();
   // TODO 1.1c: Greet candidate using their name //
-   console.log("Hello, " + candidateName+ "!");
-  askQuestion();
-  gradeQuiz(this.candidateAnswers);
- 
+   console.log("Hello, " + candidateName + "!");
+  askQuestion(questions);
+  gradeQuiz(candidateAnswers);
 }
 
 // ----------- Don't write any code or change any code below this line ---------- //
