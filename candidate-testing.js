@@ -65,10 +65,8 @@ console.log(`Q${i + 1}: Correct Answer: ${correctAnswerLower}, Candidate Answer:
 //use map method to convert all elements in arrays to lowercase (x = z.map(word => word.toLowerCase))
 //for each candidate answer that case-insensitively = the correct answer, add 1 to the 'correctCount' value (number value). else, add 1 to incorrectCount. 
 //after, divide correctCount/incorrectCount, multiply by 100
-
-
-
 console.log(`Total Correct Answers: ${correctCount}`);
+console.log ("Grade: " + grade + "%" );
   return grade;
 }
 
@@ -78,6 +76,7 @@ function runProgram() {
    console.log("Hello, " + candidateName+ "!");
   askQuestion();
   gradeQuiz(this.candidateAnswers);
+ 
 }
 
 // ----------- Don't write any code or change any code below this line ---------- //
